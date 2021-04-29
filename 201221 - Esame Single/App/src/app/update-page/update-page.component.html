@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col p-4 bg-light shadow">
+        <h2 class="text-center text-dark">MODIFICA</h2>
+    </div>
+</div>
+<div class="container mt-4 bg-light shadow rounded">
+    <form name= "insertForm" #f="ngForm" (ngSubmit)="f.form.valid && modifyBook()">
+        <div class="container">
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">Nome: </h3>
+                <input class="col-9" type="text" name="name" #name="ngModel" [(ngModel)]="book.name" value="book.name" placeholder="Nome. . . ">
+            </div>
+        
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">Autore: </h3>
+                <input class="col-9" type="text" name="author" #author="ngModel" [(ngModel)]="book.author" value="book.author" placeholder="Autore. . . ">
+            </div>
+        
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">Prezzo: </h3>
+                <input class="col-9" type="text" name="price" #price="ngModel" [(ngModel)]="book.price" value="book.price" placeholder="Prezzo. . . ">
+            </div>
+        
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">URL immagine: </h3>
+                <input class="col-9" type="text" name="imageUrl" #imageUrl="ngModel" [(ngModel)]="book.imageUrl" value="book.imageUrl" placeholder="Immagini. . . ">
+            </div>
+        
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">URL descrizione: </h3>
+                <input class="col-9" name="url" #url="ngModel" [(ngModel)]="book.url" value="book.url" placeholder="Descrizione. . . ">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <button type="submit" class="btn btn-success col">MODIFICA</button>
+        </div>
+    </form>
+</div>

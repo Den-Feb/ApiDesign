@@ -1,0 +1,9 @@
+<h2>{{recipes.title}}</h2>
+<p>Time: {{recipes.realizationTime}}s</p>
+<h3>INGREDIENTI</h3>
+<div *ngFor= "let ingredient of recipes.ingredients">
+    <p>{{ingredient}}</p>
+</div>
+<h3>DESCRIZIONE</h3>
+<p>{{ recipes.description }}</p>
+<p>Autore: {{recipes.author}}</p>

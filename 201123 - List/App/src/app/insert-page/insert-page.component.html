@@ -1,0 +1,39 @@
+<div class="grid grid-cols-6 p-3 m-0">
+    <div class="col-start-2 col-end-6 p-4 rounded-lg bg-blue-700 shadow-xl">
+        <h1 class="text-center text-xl font-sans tracking-wide text-white">INSERIMENTO</h1>
+    </div>
+</div>
+<div class="grid grid-cols-12">
+    <form class="col-start-2 col-end-12 bg-blue-300 p-5 rounded shadow-2xl" name= "insertForm" #f="ngForm" (ngSubmit)="f.form.valid && sendItem()">
+        <div class="grid grid-cols-6 mb-3">
+            <h3 class="col-start-1 col-end-2 p-3 bg-blue-700 text-right tracking-wide font-mono text-blue-300 rounded-l-lg">Autore</h3>
+            <input class="col-start-2 col-end-7 p-3 placeholder-blue-700 placeholder-opacity-50 rounded-r-lg" type="text" name="author" #author="ngModel" [(ngModel)]="item.author" placeholder="Autore. . ." required>
+        </div>
+    
+        <div style="color: red;" *ngIf="author.invalid && (author.dirty || author.touched)">
+            <div *ngIf="author?.errors?.required">
+                Campo 'Autore' obbligatorio.
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-6 mb-3">
+            <h3 class="col-start-1 col-end-2 p-3 bg-blue-700 text-right tracking-wide font-mono text-blue-300 rounded-l-lg">Titolo</h3>
+            <input class="col-start-2 col-end-7 p-3 placeholder-blue-700 placeholder-opacity-50 rounded-r-lg" type="text" name="title" id="title" #title="ngModel" [(ngModel)]="item.title" placeholder="Titolo. . ." required minlength="1" maxlength="100">
+        </div>
+    
+        <div style="color: red;" *ngIf="title.invalid && (title.dirty || title.touched)">
+            <div *ngIf="title?.errors?.required">
+                <p>Campo 'Titolo' obbligatorio.</p>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-6 mb-6">
+            <h3 class="col-start-1 col-end-2 p-3 bg-blue-700 text-right tracking-wide font-mono text-blue-300 rounded-l-lg">Messaggio</h3>
+            <input class="col-start-2 col-end-7 p-3 placeholder-blue-700 placeholder-opacity-50 rounded-r-lg" type="text" name="message" #message="ngModel" [(ngModel)]="item.message" placeholder="Messaggio. . .">
+        </div>
+
+        <div class="grid grid-cols-6">
+            <button class="col-start-1 col-end-7 p-4 rounded-lg bg-green-200 text-center text-xl font-sans tracking-wide text-green-500 transition hover:bg-green-400 hover:text-green-700" type="submit">AGGIUNGI</button>
+        </div>
+    </form>
+</div>

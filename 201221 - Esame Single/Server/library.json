@@ -1,0 +1,36 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Node.js. Guida completa per lo sviluppatore",
+      "author": "Azat Mardan",
+      "price": 47.4,
+      "imageUrl": "https://img.ibs.it/images/9788820392864_0_221_0_75.jpg",
+      "url": "https://www.ibs.it/nodejs-guida-completa-per-sviluppatore-libro-azat-mardan/e/9788820392864"
+    },
+    {
+      "id": 2,
+      "name": "Costruire bot con Node.js. Utilizzare chatbot per automatizzare lavoro e comunicazione",
+      "author": "Eduardo Freitas, Madan Bhintade",
+      "price": 27.5,
+      "imageUrl": "https://img.ibs.it/images/9788850334353_0_221_0_75.jpg",
+      "url": "https://www.ibs.it/costruire-bot-con-nodejs-utilizzare-libro-eduardo-freitas-madan-bhintade/e/9788850334353"
+    },
+    {
+      "id": 3,
+      "name": "Design patterns",
+      "author": "Gamma, E., Helm, R., Johnson, R. e Vlissides, J.",
+      "price": "77.05",
+      "imageUrl": "https://img.ibs.it/images/9788871921501_0_221_0_75.jpg",
+      "url": "https://www.ibs.it/design-patterns-libro-vari/e/9788871921501"
+    },
+    {
+      "name": "Php",
+      "author": "Mario",
+      "price": "144",
+      "imageUrl": "https://kinsta.com/it/wp-content/uploads/sites/2/2019/11/che-cos-il-php-3-1.png",
+      "url": "https://kinsta.com/it/wp-content/uploads/sites/2/2019/11/che-cos-il-php-3-1.png",
+      "id": 4
+    }
+  ]
+}

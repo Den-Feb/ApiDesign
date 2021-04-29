@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col p-4 bg-light shadow">
+        <h2 class="text-center text-dark">INSERIMENTO</h2>
+    </div>
+</div>
+<div class="container mt-4 pt-4 bg-light shadow rounded">
+    <form class="" name= "insertForm" #f="ngForm" (ngSubmit)="f.form.valid && insertBooks()">
+        <div class="container">
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">Nome: </h3>
+                <input class="col-9" type="text" name="name" #name="ngModel" [(ngModel)]="newBook.name" required placeholder="Nome. . . ">
+            </div>
+            <div class="row justify-content-center mb-3" *ngIf="name.invalid && (name.dirty || name.touched)">
+                <div class="col-8 p-4 bg-danger rounded shadow" *ngIf="name?.errors?.required">
+                    <h4 class="text-light text-center front-weight-bold">NOME richiesto!</h4>
+                </div>
+            </div>
+        
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">Autore: </h3>
+                <input class="col-9" type="text" name="author" #author="ngModel" [(ngModel)]="newBook.author" required placeholder="Autore. . . ">
+            </div>
+            <div class="row justify-content-center mb-3" *ngIf="author.invalid && (author.dirty || author.touched)">
+                <div class="col-8 p-4 bg-danger rounded shadow" *ngIf="author?.errors?.required">
+                    <h4 class="text-light text-center front-weight-bold">AUTORE richiesto!</h4>
+                </div>
+            </div>
+        
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">Prezzo: </h3>
+                <input class="col-9" type="text" name="price" #price="ngModel" [(ngModel)]="newBook.price" required placeholder="Prezzo. . . ">
+            </div>
+            <div class="row justify-content-center mb-3" *ngIf="price.invalid && (price.dirty || price.touched)">
+                <div class="col-8 p-4 bg-danger rounded shadow" *ngIf="price?.errors?.required">
+                    <h4 class="text-light text-center front-weight-bold">PREZZO richiesto!</h4>
+                </div>
+            </div>
+        
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">URL immagine: </h3>
+                <input class="col-9" type="text" name="imageUrl" #imageUrl="ngModel" [(ngModel)]="newBook.imageUrl" required placeholder="Immagini. . . ">
+            </div>
+            <div class="row justify-content-center mb-3" *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched)">
+                <div class="col-8 p-4 bg-danger rounded shadow" *ngIf="imageUrl?.errors?.required">
+                    <h4 class="text-light text-center front-weight-bold">URL DELL'IMMAGINE richiesto!</h4>
+                </div>
+            </div>
+        
+            <div class="row mb-3">
+                <h3 class="border border-secondary col-3 text-center text-light front-weight-normal p-2 mb-0 bg-dark">URL descrizione: </h3>
+                <input class="col-9" name="url" #url="ngModel" [(ngModel)]="newBook.url" required placeholder="Descrizione. . . ">
+            </div>
+            <div class="row justify-content-center mb-3" *ngIf="url.invalid && (url.dirty || url.touched)">
+                <div class="col-8 p-4 bg-danger rounded shadow" *ngIf="url?.errors?.required">
+                    <h4 class="text-light text-center front-weight-bold">URL richiesto!</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <button type="submit" class="btn btn-success col">AGGIUNGI</button>
+        </div>
+    </form>
+</div>

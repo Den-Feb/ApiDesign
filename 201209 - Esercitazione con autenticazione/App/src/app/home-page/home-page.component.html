@@ -1,0 +1,23 @@
+<select [(ngModel)]="selectedOptionType">
+    <option value="Id">Id</option>
+    <option value="Autore">Autore</option>
+</select>
+<div *ngIf="selectedOptionType == 'Id'">
+    <select [(ngModel)]="selectedOption">
+        <option *ngFor="let item of recipes" value={{item._id}}>{{item._id}}</option>
+    </select>
+</div>
+
+
+<div *ngIf="selectedOptionType == 'Autore'">
+    <select [(ngModel)]="selectedOption">
+        <option *ngFor="let item of recipes" value={{item.author}}>{{item.author}}</option>
+    </select>
+</div>
+
+
+<button type="submit" (click)="getOneRecipe()">CERCA</button>
+
+<div *ngFor="let item of recipes">
+    <app-recipe [recipes]="item"></app-recipe>
+</div>

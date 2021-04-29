@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pagina di inserimento</title>
+    <meta name="description" content="Pagina di inserimento">
+    <meta name="keywords" content="Insert">
+    <meta name="author" content="Denis Fabris">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/bootstrap.min.css'>
+</head>
+
+<body>
+    <div class="row p-2 mb-3 bg-dark shadow">
+        <h1 class="text-center text-light col">INSERIMENTO</h1>
+    </div>
+    <div class="container mt-3 p-4 bg-secondary rounded shadow">
+        <form method="post" action="/api/InsertUser/" target="__blank">
+            <div class="form-group">
+                <label class="text-light">Nome: </label>
+                <input class="form-control" type="text" name="FirstName" placeholder="Nome . . ">
+            </div>
+            <div class="form-group">
+                <label class="text-light">Cognome: </label>
+                <input class="form-control" type="text" name="LastName" placeholder="Cognome . . ">
+            </div>
+            <div class="form-group">
+                <label class="text-light">Citta: </label>
+                <input class="form-control" type="text" name="City" placeholder="Città . . ">
+            </div>
+            <div class="form-group">
+                <label class="text-light">Citta: </label>
+                <input class="form-control mb-5" type="date" name="BirthDate" placeholder="Compleanno . . ">
+            </div>
+            <button class="btn btn-success col" type="submit">AGGIUNGI</button>
+        </form>
+    </div>
+
+    <script src="/script/bootstrap.min.js"></script>
+</body>
+
+</html>

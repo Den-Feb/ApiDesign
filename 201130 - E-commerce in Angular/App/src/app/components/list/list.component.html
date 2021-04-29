@@ -1,0 +1,14 @@
+<div class="col-span-8 bg-gray-100 rounded-lg shadow-2xl">
+    <h3 class="break-words text-center tracking-widest font-mono text-xl bg-blue-200 text-blue-700 mb-4 p-3 rounded-t-lg shadow-xl">{{product.nome}}</h3>
+    <h4 class="break-words tracking-wide text-lg font-bold text-blue-700 text-center mb-2">DESCRIZIONE</h4>
+    <p class="break-words tracking-wide text-lg text-blue-700 m-2">{{product.descrizione}}</p>
+    <h4 class="break-words tracking-wide text-lg font-bold text-blue-700 text-center mb-2">PREZZO</h4>
+    <p class="break-words tracking-wide text-lg text-red-700 m-2">{{product.prezzo}} EURO</p>
+    <h4 class="break-words tracking-wide text-lg font-bold text-blue-700 text-center mb-2">QUANTITA'</h4>
+    <div class="grid grid-cols-7 shadow-xl">
+        <button class= "col-start-1 col-end-3 p-2 bg-blue-200 font-extrabold text-center text-xl text-green-500 transition hover:bg-green-400 hover:text-green-700" (click)="setQuantity(true)">+</button>
+        <h3 class= "col-start-3 col-end-6 p-2 text-center font-extrabold text-blue-700">{{this.basket.quantity}}</h3>
+        <button class= "col-start-6 col-end-8 p-2 bg-blue-200 font-extrabold text-center text-xl text-red-500 transition hover:bg-red-400 hover:text-red-700 hover:shadow-xl" (click)="setQuantity(false)">-</button>
+        <button class= "col-start-1 col-end-8 p-2 bg-green-200 rounded-b-lg text-center text-xl text-green-500 transition hover:bg-green-400 hover:text-green-700" (click)="confirmProduct()">AGGIUNGI</button>
+    </div>
+</div>

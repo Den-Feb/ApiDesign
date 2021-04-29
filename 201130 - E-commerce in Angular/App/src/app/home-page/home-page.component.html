@@ -1,0 +1,17 @@
+<div class="grid grid-cols-12">
+    <div class="col-start-1 col-end-10">
+        <div class="grid grid-cols-1 p-4 bg-gray-900 shadow-xl">
+            <h2 class="text-center text-xl font-sans tracking-wide text-white">PRODOTTI</h2>
+        </div>
+        <div class="grid grid-cols-12 mt-5">
+            <div class="col-start-2 col-end-12 grid grid-cols-3 grid-flow-row auto-rows-max gap-8">
+                <div *ngFor="let item of productsItems">
+                    <app-list [product]="item" (eSetBasket)="setNewItem($event)"></app-list>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-start-10 col-end-13">
+        <app-basket [newBasket]="newBasket" [products]="productsItems"></app-basket>
+    </div>
+</div>

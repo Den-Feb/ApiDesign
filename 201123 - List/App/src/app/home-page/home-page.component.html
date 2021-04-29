@@ -1,0 +1,13 @@
+<div class="grid grid-cols-6 p-3 mb-6">
+    <div class="col-start-2 col-end-6 p-4 rounded-lg bg-blue-700">
+        <h1 class="text-center text-xl font-sans tracking-wide text-white">HOME</h1>
+    </div>
+</div>
+<div class="grid grid-cols-10">
+    <button
+        class="col-start-2 col-end-6 p-4 mb-4 rounded-l-lg border-2 border-green-500 bg-green-200 text-center text-xl font-sans tracking-wide text-green-500 transition hover:bg-green-400 hover:text-green-700"
+        [routerLink]="['list']">LISTA</button>
+    <button
+        class="col-start-6 col-end-10 p-4 mb-4 rounded-r-lg border-2 border-green-500 bg-green-200 text-center text-xl font-sans tracking-wide text-green-500 transition hover:bg-green-400 hover:text-green-700"
+        [routerLink]="['insert']">INSERIMENTO</button>
+</div>

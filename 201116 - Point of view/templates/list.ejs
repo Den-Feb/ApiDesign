@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pagina di visualizzazione</title>
+    <meta name="description" content="Pagina di visualizzazione utenti">
+    <meta name="keywords" content="List">
+    <meta name="author" content="Denis Fabris">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/bootstrap.min.css'>
+</head>
+
+<body>
+    <div class="row p-2 mb-3 bg-dark shadow">
+        <h1 class="text-center text-light col">LISTA</h1>
+    </div>
+    <div class="container">
+        <% users.forEach(element => { %>
+        <div class="card col mb-2 bg-secondary shadow">
+            <div class="card-body">
+                <h5 class="card-title text-center"><%= element.FirstName %> <%= element.LastName %></h5>
+                <p class="card-text text-center"><strong>Città: </strong><%= element.City %></p>
+                <p class="card-text text-center"><strong>Compleanno </strong><%= element.BirthDate %></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <script src="/script/bootstrap.min.js"></script>
+</body>
+
+</html>
